@@ -12,51 +12,58 @@ import slider5 from "../../../assets/home/slide5.jpg";
 
 // import required modules
 import { Pagination } from "swiper";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Category = () => {
   return (
     <div>
-      <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src={slider1} alt="" />
-          <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
-            SALADS
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider2} alt="" />
-          <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
-            Soups
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider3} alt="" />
-          <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
-            pizzas
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider4} alt="" />
-          <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
-            desserts
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slider5} alt="" />
-          <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
-            SALADS
-          </p>
-        </SwiperSlide>
-      </Swiper>
+      <section>
+        <SectionTitle
+          subHeading={"---From 11:00am to 10:00pm---"}
+          heading={"ORDER ONLINE"}
+        ></SectionTitle>
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          centeredSlides={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src={slider1} alt="" />
+            <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
+              SALADS
+            </p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slider2} alt="" />
+            <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
+              Soups
+            </p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slider3} alt="" />
+            <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
+              pizzas
+            </p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slider4} alt="" />
+            <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
+              desserts
+            </p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={slider5} alt="" />
+            <p className="uppercase text-3xl text-center -mt-12 mb-10 text-white font-semibold">
+              SALADS
+            </p>
+          </SwiperSlide>
+        </Swiper>
+      </section>
     </div>
   );
 };
