@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
         </div>
         {/* div2 */}
-        <div className="footer row-gap:1rem p-10 bg-neutral text-neutral-content flex flex-col  justify-center items-center ">
+        <div className="footer  row-gap:1rem p-10 bg-neutral text-neutral-content flex flex-col  justify-center items-center ">
           <div>
             <h3 className="text-3xl text-bold">Follow Us</h3>
             <p>Join us on social media</p>
