@@ -1,6 +1,30 @@
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const navOptions = (
+    <>
+      <li className="group hover:bg-red-300 rounded-lg">
+        <Link to="/" className="hover:text-white">
+          HOME
+        </Link>
+      </li>
+      <li className="  hover:bg-red-300 rounded-lg ">
+        <Link className="hover:text-white">CONTACT US</Link>
+      </li>
+      <li className="  hover:bg-red-300 rounded-lg ">
+        <Link className="hover:text-white">DASHBOARD</Link>
+      </li>
+      <li className=" hover:bg-red-300  rounded-lg ">
+        <Link to="/menu" className="hover:text-white">
+          OUR MENU
+        </Link>
+      </li>
+
+      <li className=" hover:bg-red-300  rounded-lg ">
+        <Link className="hover:text-white">OUR SHOP</Link>
+      </li>
+    </>
+  );
   return (
     <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl  h-24  ">
       <div className="navbar-start">
@@ -25,22 +49,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black"
           >
-            <li className="  hover:bg-white-600">
-              <Link>HOME</Link>
-            </li>
-            <li>
-              <Link>CONTACT US</Link>
-            </li>
-            <li>
-              <Link>DASHBOARD</Link>
-            </li>
-            <li>
-              <Link>OUR MENU</Link>
-            </li>
-
-            <li>
-              <Link>OUR SHOP</Link>
-            </li>
+            {navOptions}
           </ul>
         </div>
         <p>
@@ -58,24 +67,7 @@ const Navbar = () => {
         </p>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li className=" hover:bg-yellow-500 rounded-lg ">
-            <Link>HOME</Link>
-          </li>
-          <li className=" hover:bg-yellow-500 rounded-lg ">
-            <Link>CONTACT US</Link>
-          </li>
-          <li className=" hover:bg-yellow-500 rounded-lg ">
-            <Link>DASHBOARD</Link>
-          </li>
-          <li className=" hover:bg-yellow-500 rounded-lg ">
-            <Link>OUR MENU</Link>
-          </li>
-
-          <li className=" hover:bg-yellow-500 rounded-lg ">
-            <Link>OUR SHOP</Link>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navOptions}</ul>
       </div>
       <div className="navbar-end">
         <Link className="btn">Button</Link>

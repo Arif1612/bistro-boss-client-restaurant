@@ -9,7 +9,9 @@ const RecommendItemDetails = ({ item }) => {
         <h2 className="card-title">{name}</h2>
         <p>{recipe}</p>
         <div className="card-actions">
-          <button className="btn btn-outline btn-success">Add to Cart</button>
+          <button className="btn btn-outline border-yellow-500 border-0 border-b-4 text-yellow-500 ">
+            Read More
+          </button>
         </div>
       </div>
     </div>
