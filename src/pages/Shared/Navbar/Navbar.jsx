@@ -4,25 +4,33 @@ const Navbar = () => {
   const navOptions = (
     <>
       <li className="group hover:bg-red-300 rounded-lg">
-        <Link to="/" className="hover:text-white">
+        <Link to="/" className="hover:text-white  focus:text-yellow-500 ">
           HOME
         </Link>
       </li>
-      <li className="  hover:bg-red-300 rounded-lg ">
-        <Link className="hover:text-white">CONTACT US</Link>
-      </li>
-      <li className="  hover:bg-red-300 rounded-lg ">
-        <Link className="hover:text-white">DASHBOARD</Link>
-      </li>
       <li className=" hover:bg-red-300  rounded-lg ">
-        <Link to="/menu" className="hover:text-white">
+        <Link to="/menu" className="hover:text-white focus:text-yellow-500 ">
           OUR MENU
         </Link>
       </li>
-
       <li className=" hover:bg-red-300  rounded-lg ">
-        <Link className="hover:text-white">OUR SHOP</Link>
+        <Link
+          to="/order/salad"
+          className="hover:text-white focus:text-yellow-500 "
+        >
+          ORDER FOOD
+        </Link>
       </li>
+      <li className=" hover:bg-red-300  rounded-lg ">
+        <Link
+          to="/login"
+          className="hover:text-white focus:text-yellow-500 "
+        >
+          LOGIN
+        </Link>
+      </li>
+
+      
     </>
   );
   return (
