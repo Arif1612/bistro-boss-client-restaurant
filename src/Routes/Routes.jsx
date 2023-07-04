@@ -8,8 +8,11 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Shared/Secret/Secret";
+import Dashboard from "../Layout/Dashboard";
+import MyCart from "../Layout/MyCart/MyCart";
 
 export const router = createBrowserRouter([
+  // Main Route
   {
     path: "/",
     element: <Main></Main>,
@@ -43,6 +46,17 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+    ],
+  },
+  // dashboard route
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "mycart",
+        element: <MyCart></MyCart>,
+      },  
     ],
   },
 ]);

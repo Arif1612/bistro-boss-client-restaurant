@@ -42,7 +42,7 @@ const Navbar = () => {
         </Link>
       </li>
       <li className=" hover:bg-red-300  rounded-lg ">
-        <Link to="/" className="hover:text-white focus:text-yellow-500 ">
+        <Link to="/dashboard/mycart" className="hover:text-white focus:text-yellow-500 ">
           <button className="btn">
             <FaShoppingCart></FaShoppingCart>
             <div className="badge badge-secondary">+{ cart?.length || 0}</div>
