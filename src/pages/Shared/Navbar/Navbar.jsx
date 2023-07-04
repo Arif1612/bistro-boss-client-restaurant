@@ -1,6 +1,21 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { FaShoppingCart } from "react-icons/fa";
+import useCart from "../../../hooks/useCart";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart(); //custom hook banaise
+
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
+ 
   const navOptions = (
     <>
       <li className="group hover:bg-red-300 rounded-lg">
@@ -22,15 +37,48 @@ const Navbar = () => {
         </Link>
       </li>
       <li className=" hover:bg-red-300  rounded-lg ">
-        <Link
-          to="/login"
-          className="hover:text-white focus:text-yellow-500 "
-        >
-          LOGIN
+        <Link to="/secret" className="hover:text-white focus:text-yellow-500 ">
+          Secret
+        </Link>
+      </li>
+      <li className=" hover:bg-red-300  rounded-lg ">
+        <Link to="/" className="hover:text-white focus:text-yellow-500 ">
+          <button className="btn">
+            <FaShoppingCart></FaShoppingCart>
+            <div className="badge badge-secondary">+{ cart?.length || 0}</div>
+          </button>
         </Link>
       </li>
 
-      
+      {user ? (
+        <>
+          <li className=" hover:bg-red-300   rounded-lg">
+            <div className=" hover:bg-red-300   rounded-lg">
+              <div>
+                {" "}
+                <span>{user?.displayName}</span>
+              </div>
+              <div>
+                {" "}
+                <button onClick={handleLogout} className="btn btn-ghost">
+                  Signout
+                </button>
+              </div>
+            </div>
+          </li>
+        </>
+      ) : (
+        <>
+          <li className=" hover:bg-red-300  rounded-lg ">
+            <Link
+              to="/login"
+              className="hover:text-white focus:text-yellow-500 "
+            >
+              LOGIN
+            </Link>
+          </li>
+        </>
+      )}
     </>
   );
   return (
