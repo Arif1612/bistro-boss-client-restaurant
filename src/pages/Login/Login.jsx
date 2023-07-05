@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet-async";
 
 // ES6 Modules or TypeScript
 import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 // CommonJS
 // const Swal = require("sweetalert2");
@@ -145,6 +146,7 @@ const Login = () => {
               <small>
                 New Here? <Link to="/signup"> Create an account</Link>
               </small>
+              <SocialLogin></SocialLogin>
             </p>
           </div>
         </div>
